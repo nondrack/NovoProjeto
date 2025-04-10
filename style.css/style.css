@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@media (min-width: 480px){
+.header-nav {
+    text-transform: uppercase;
+    background-color: #333;
+    border: 0;
+    width: 100%;
+    display: block;
+    
+     ul{
+        li{
+            display: inline-block;
+            text-decoration: none;
+           
+            a {
+                padding: 10px;
+                display: block;
+                color: aqua;
+                
+                
+            }
+            a:hover {
+                color: white;
+                border-bottom: 5px solid red;
+
+        }
+    }
+    }
+}
+}
