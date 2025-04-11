@@ -1,0 +1,128 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Header Styles */
+.header {
+  background-color: #333;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header-logo h1 {
+  color: white;
+  margin-left: 10px;
+  font-family: 'Bungee Spice', cursive;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.header-logo h1:hover {
+  color: red;
+}
+
+.header-logo img {
+  height: 40px;
+}
+
+.header-menu {
+  display: none;
+  background-color: #4CAF50;
+  padding: 10px;
+  color: white;
+  border-radius: 50%;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.header-nav li {
+  margin: 0 10px;
+}
+
+.header-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+}
+
+.header-nav a:hover {
+  color: red;
+  border-bottom: 2px solid red;
+}
+
+.btn {
+  background-color: #f44336;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: red;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .header-menu {
+    display: block; /* Exibe o botão de menu nas telas pequenas */
+  }
+
+  .header-nav {
+    display: none; /* O menu fica oculto inicialmente */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 20px;
+  }
+
+  .header-nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  .header-nav li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .header-nav a {
+    width: 100%;
+    padding: 10px;
+  }
+}
