@@ -4,9 +4,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+main {
+  background: url(../imagen/backGround1.png) center;
+  background-size: cover;
+}
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Header Styles */
@@ -30,24 +34,28 @@ body {
 }
 
 .header-logo h1 {
-  color: white;
+  
   margin-left: 10px;
-  font-family: 'Bungee Spice', cursive;
+  font-family: "Bungee Spice";
   font-size: 30px;
   cursor: pointer;
 }
 
 .header-logo h1:hover {
   color: red;
+  scale: 110%;
 }
 
 .header-logo img {
   height: 40px;
 }
+.header-logo img:hover {
+  scale: 120%;
+}
 
 .header-menu {
   display: none;
-  background-color: #4CAF50;
+  background-color: #e21313;
   padding: 10px;
   color: white;
   border-radius: 50%;
@@ -76,7 +84,7 @@ body {
 }
 
 .header-nav a:hover {
-  color: red;
+  color: white;
   border-bottom: 2px solid red;
 }
 
@@ -91,9 +99,88 @@ body {
 .btn:hover {
   background-color: red;
 }
+footer {
+  width: 100%;
+}
+.footer-content {
+  background-color: #333;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 10px;
+  .footer-social {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    padding-top: 20px;
+  }
+}
+
+.footer-contats h1 {
+  margin-bottom: 0.75rem;
+}
+.footer-contats {
+  h1,
+  h3 {
+    font-family: rooto;
+    font: bold;
+    color: white;
+  }
+  img {
+    width: 5rem;
+  }
+}
+.banner-mobile {
+  text-align: center;
+  h1 {
+    font-family: "Bungee Spice";
+    font-size: 70px;
+  }
+  h2 {
+    font-family: Bungee Spice;
+    font-size: 50px;
+  }
+  .img-banner {
+    width: 100%;
+    height: auto;
+  }
+}
+.footer-social .footer-link {
+  height: 2rem;
+  color: white;
+}
+.historia {
+  text-align: center;
+  padding-top: 10rem;
+  font-size: 50px;
+  font-weight: bold;
+  .col {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    p{
+      padding: 40px;
+    }
+    img {
+      width: 25rem;
+      padding-left: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
+  }h2{
+    padding-bottom: 15px;
+    font-family: "Bungee Spice";
+  }
+}
+.botao {
+  margin-top: 80px;
+  font-size: 30px;
+  a{
+    text-decoration: none;
+  }
+}
 
 /* Mobile Styles */
-@media (max-width: 768px) {
+@media (max-width: 880px) {
   .header-menu {
     display: block; /* Exibe o botão de menu nas telas pequenas */
   }
@@ -124,5 +211,84 @@ body {
   .header-nav a {
     width: 100%;
     padding: 10px;
+  }
+  footer {
+    width: 100%;
+  }
+  .footer-content {
+    background-color: #333;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 10px;
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      padding-top: 15px;
+      flex-direction: column;
+    }
+  }
+
+  .footer-contats h1 {
+    margin-bottom: 0.75rem;
+  }
+  .footer-contats {
+    h2 {
+      font-family: roboto;
+      font: bold;
+      color: white;
+    }
+    img {
+      width: 50px;
+    }
+  }
+
+  .footer-social .footer-link {
+    height: 2rem;
+    color: white;
+  }
+  main {
+    background: url(../imagen/backGround.avif) no-repeat;
+    background-size: cover;
+  }
+  .banner-mobile {
+    text-align: center;
+    h1 {
+      font-family: "Bungee Spice";
+      font-size: 40px;
+    }
+    h2 {
+      font-family: "Bungee Spice";
+      font-size: 25px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .historia {
+    font-family: Bungee Spice;
+    h2{
+      padding-bottom: 25px;
+      font-size: 60px;
+    }
+    .col {
+      display: flexbox;
+      flex-direction: column-reverse;
+      color: white;
+      font-family: arial;
+      font-weight: bold;
+      font-size: 20px;
+      padding: 10px;
+      img{
+        width: 80%;
+        align-items: center;
+      }
+
+    }
+  }
+  .botao{
+    a{
+      text-decoration: none;
+    }
   }
 }
