@@ -7,6 +7,7 @@
 main {
   background: url(../imagen/backGround1.png) center;
   background-size: cover;
+  padding-top: 90px;
 }
 
 body {
@@ -18,6 +19,7 @@ body {
   background-color: #333;
   width: 100%;
   padding: 10px 20px;
+  position: fixed;
 }
 
 .header-container {
@@ -154,9 +156,11 @@ footer {
   font-weight: bold;
   .col {
     display: flex;
+    flex-direction: column-reverse;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 40px;
+    align-items: center;
     p {
       padding: 40px;
     }
@@ -204,9 +208,8 @@ footer {
       padding: 3px;
       font-family: Arial, Helvetica, sans-serif;
       font-weight: bold;
-
     }
-    .msg{
+    .msg {
       border-radius: 10px;
       width: 50%;
       font-family: Arial, Helvetica, sans-serif;
@@ -214,11 +217,11 @@ footer {
       font-size: 15px;
     }
   }
-  .field{
+  .field {
     margin-top: 10px;
   }
 }
-.footer-conten{
+.footer-conten {
   background-color: #333;
   text-align: center;
   align-items: center;
@@ -230,31 +233,38 @@ footer {
     padding-top: 20px;
   }
 }
-.imagem{
+.imagem {
   display: flex;
   justify-content: center;
 }
-.span-required{
+.span-required {
   display: none;
   font-size: 12px;
   margin: 3px 0 0 1px;
   color: red;
 }
-.container-sobreoJogo{
-  display:flex;
+.container-sobreoJogo {
+  display: flex;
   flex-direction: column;
   text-align: center;
-  p{
+  padding: 50px;
+  p {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
     color: white;
     padding: 10px;
+    text-align: center;
   }
-  h1{
+  h1 {
     font-family: "Bungee Spice";
   }
 }
+.iframe{
+  
+}
+
+
 
 /* Mobile Styles */
 @media (max-width: 880px) {
@@ -393,7 +403,7 @@ footer {
         font-family: Arial, Helvetica, sans-serif;
         font-weight: bold;
       }
-      #msg{
+      #msg {
         justify-content: center;
         padding-bottom: 10px;
         margin-bottom: 15px;
@@ -401,25 +411,29 @@ footer {
       }
     }
   }
-  .imagem{
-    img{
+  .imagem {
+    img {
       width: 100%;
-      
     }
   }
-  .container-sobreoJogo{
-    display:flex;
+  .container-sobreoJogo {
+    display: flex;
     flex-direction: column;
     text-align: center;
-    p{
+    .col-sobre {
+      display: flex;
+      flex-direction: column;
+    }
+    p {
       font-family: Arial, Helvetica, sans-serif;
       font-size: 20px;
       font-weight: bold;
       color: white;
       padding: 10px;
     }
-    h1{
-      color: white;
-    }
+  }
+  main {
+    background: url(../imagen/backGround1.png) center;
+    background-size: cover;
   }
 }
