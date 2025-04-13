@@ -44,25 +44,26 @@
             <div class="form-container">
                 <form id="form">
                     <div class="field">
-                        <label>Nome:</label>
-                        <input type="text" id="nome">
+                        <input type="text" placeholder="Digite seu nome" class="inputs required"
+                            oninput="nameValidate()">
+                        <span class="span-required">Seu nome deve ter no mínimo 3 caracteres</span>
                     </div>
                     <div class="field">
-                        <label>E-mail:</label>
-                        <input type="e-mail" id="email">
+                        <input type="e-mail" placeholder="Digite seu e-mail" class="inputs required" oninput="emailValidate()">
+                        <span class="span-required">Digite um email válido</span>
                     </div>
                     <div class="field">
-                        <label>Mensagem:</label><br><textarea class="msg" cols="35" rows="8"></textarea><br>
+                        <textarea class="inputs" nome="descricao" cols="25" rows="10"
+                            placeholder="Descreva o problema"></textarea>
                     </div>
-                    <div class="btn-container">
-                        <button type="button" id="booton" class="btn">Enviar</button>
-                    </div>
+                    <button type="submit" id="botao" class="btn">Enviar</button>
                 </form>
             </div>
         </div>
         <div class="imagem">
             <img src="../imagen/Run (3).png" alt="">
         </div>
+
 
 
 
@@ -103,5 +104,58 @@
         </div>
     </footer>
 </body>
+<script>
+    const form = document.getElementById('form');
+    const campos = document.querySelectorAll('.required');
+    const spans = document.querySelectorAll('.span-required');
+    const emailRegex = /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        nameValidate();
+        emailValidate();
+        })
+
+    function setError(index) {
+        campos[index].style.border = "5px solid #e63636";
+        spans[index].style.display = "block"
+    }
+
+    function removeError(index) {
+        campos[index].style.border = "";
+        spans[index].style.display = "none"
+    }
+
+    function nameValidate() {
+        if (campos[0].value.length < 3) {
+            setError(0);
+           
+        } else {
+            removeError(0)
+        }
+    }
+
+    function emailValidate(){
+        if(!emailRegex.test(campos[1].value)){
+            setError(1);
+        }else{
+            removeError(1);
+        }
+    }
+    document.getElementById("botao").onclick = function(){
+        if (campos[0].value.length < 3) {
+            alert("Digite seu nome");
+           
+        } else{
+            if(!emailRegex.test(campos[1].value)){
+            alert("Digite seu email");
+        }else{            
+            alert("Formulario enviado com sucesso")
+        }
+            
+    }
+    }
+
+</script>
 
 </html>

@@ -234,6 +234,12 @@ footer {
   display: flex;
   justify-content: center;
 }
+.span-required{
+  display: none;
+  font-size: 12px;
+  margin: 3px 0 0 1px;
+  color: red;
+}
 
 /* Mobile Styles */
 @media (max-width: 880px) {
@@ -372,7 +378,7 @@ footer {
         font-family: Arial, Helvetica, sans-serif;
         font-weight: bold;
       }
-      .msg{
+      #msg{
         justify-content: center;
         padding-bottom: 10px;
         margin-bottom: 15px;
