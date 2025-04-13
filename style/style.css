@@ -240,6 +240,21 @@ footer {
   margin: 3px 0 0 1px;
   color: red;
 }
+.container-sobreoJogo{
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+  }
+  h1{
+    font-family: "Bungee Spice";
+  }
+}
 
 /* Mobile Styles */
 @media (max-width: 880px) {
@@ -390,6 +405,21 @@ footer {
     img{
       width: 100%;
       
+    }
+  }
+  .container-sobreoJogo{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    p{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      padding: 10px;
+    }
+    h1{
+      color: white;
     }
   }
 }
