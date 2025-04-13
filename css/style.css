@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 main {
-  background: url(../imagen/backGround1.png) center;
+  background: url(../images/backGround1.png) center;
   background-size: cover;
   padding-top: 90px;
 }
@@ -260,9 +260,7 @@ footer {
     font-family: "Bungee Spice";
   }
 }
-.iframe{
-  
-}
+
 
 
 
@@ -335,7 +333,7 @@ footer {
     color: white;
   }
   main {
-    background: url(../imagen/backGround.avif) no-repeat;
+    background: url(../images/backGround.avif) no-repeat;
     background-size: cover;
   }
   .banner-mobile {
@@ -433,7 +431,7 @@ footer {
     }
   }
   main {
-    background: url(../imagen/backGround1.png) center;
+    background: url(../images/backGround1.png) center;
     background-size: cover;
   }
 }
